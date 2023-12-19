@@ -19,6 +19,7 @@ const CoinPage = () => {
     const [coinData, setCoinData] = useState({});
     const [chartData, setChartData] = useState(null);
     const [basicData, setBasicData] = useState(null);
+    const [days, setDays] = useState(2);
 
     console.log(basicData);
 
@@ -28,8 +29,7 @@ const CoinPage = () => {
         // setCoinData(res.data);
         coimobject(setBasicData, res.data)
 
-        const { prices } = await getChartData()
-        console.log(prices);
+        const { prices } = await getChartData(id,days)
 
         if (prices.length > 2) {
             const chartData = {
@@ -46,9 +46,6 @@ const CoinPage = () => {
             };
             setChartData(chartData)
         }
-
-
-
         // if (basicData?.price_change_24h < 0) {
         //     color = 'red'
         // }
