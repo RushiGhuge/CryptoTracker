@@ -1,0 +1,19 @@
+.getToTopBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.css-1gws2xf-MuiButtonBase-root-MuiIconButton-root {
+    background: rgb(252, 252, 252) !important;
+    opacity: 0.5;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.9;
+        transition: 0.3s;
+
+    }
+}
+
+.arrow {}

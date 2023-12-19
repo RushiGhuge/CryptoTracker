@@ -1,0 +1,24 @@
+.gray-wrapper{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.gray-wrapper > p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+
+.gray-wrapper > p > a{
+    border: 1px solid gray;
+    padding: 0 0.3rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.rearMore{
+    background: red;
+}
