@@ -10,9 +10,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/CryptoTracker">
         <Header />
-
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/dashbord' element={<Dashbord/>}/>
