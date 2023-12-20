@@ -6,9 +6,11 @@ import './chart.css'
 
 const CoinChart = ({ data }) => {
 
+  console.log(data);
+
   return (
     <div className='chart-container'>
-      <h2>Simple Line Chart</h2>
+      <h2>{data.datasets[0].label}</h2>
       <Line data={data} />
     </div>
   );

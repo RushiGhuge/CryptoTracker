@@ -1,17 +1,17 @@
 // this is Home page...
-import React, { useState } from 'react';
+import React from 'react';
 import iPhone from '../../assets/iphone.080029ada53f0cd57453.png'
 import bg from '../../assets/gradient.12a666ed10b3b442b534.png'
 import './style.css'
 import { motion } from 'framer-motion';
 import Modal from '@mui/material/Modal';
-import { Box, Button, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import whatsapp from '../../assets/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.svg'
 import fecebook from '../../assets/5365678_fb_facebook_facebook logo_icon.svg'
 import insta from '../../assets/5296765_camera_instagram_instagram logo_icon.svg'
 import linkedin from '../../assets/5296501_linkedin_network_linkedin logo_icon.svg'
 import pin from '../../assets/5296503_inspiration_pin_pinned_pinterest_social network_icon.svg'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 

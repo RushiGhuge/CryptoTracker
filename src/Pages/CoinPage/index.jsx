@@ -7,6 +7,7 @@ import CoinInfo from '../../Componants/Coin/CoinInfo';
 import './style.css'
 import CoinChart from '../../Componants/Charts/Chart';
 import getChartData from '../../Functions/getChartData';
+import SelectDays from '../../Componants/Charts/SelectDays';
 
 const CoinPage = () => {
 
@@ -16,7 +17,6 @@ const CoinPage = () => {
 
     let color = 'green';
     const { id } = useParams();
-    const [coinData, setCoinData] = useState({});
     const [chartData, setChartData] = useState(null);
     const [basicData, setBasicData] = useState(null);
     const [days, setDays] = useState(2);
@@ -29,14 +29,21 @@ const CoinPage = () => {
         // setCoinData(res.data);
         coimobject(setBasicData, res.data)
 
-        const { prices } = await getChartData(id,days)
+        // if (basicData?.price_change_24h < 0) {
+        //     color = 'red'
+        // }
+    }
+
+    // this fucntion is get the chart details...
+    const makeChart = async () => {
+        const { prices } = await getChartData(id, days)
 
         if (prices.length > 2) {
             const chartData = {
                 labels: prices.map(ele => new Date(ele[0]).getDate()),
                 datasets: [
                     {
-                        label: 'My First dataset',
+                        label: `${id}`,
                         data: prices.map(ele => ele[1]),
                         fill: true,
                         borderColor: 'white',
@@ -46,12 +53,11 @@ const CoinPage = () => {
             };
             setChartData(chartData)
         }
-        // if (basicData?.price_change_24h < 0) {
-        //     color = 'red'
-        // }
     }
 
-
+    useEffect(() => {
+        makeChart()
+    }, [days])
 
     // Call the api when the page is load ...
     // This Function will call only once when page is load....
@@ -70,9 +76,12 @@ const CoinPage = () => {
                 <div>
                     <ListBox ele={basicData} color={'green'} delay={0} />
 
-                    {   
-                    chartData &&
-                        <CoinChart data={chartData} />
+                    {
+                        chartData &&
+                        <div>
+                            <SelectDays days={days} setDays={setDays} />
+                            <CoinChart data={chartData} />
+                        </div>
                     }
 
                     <CoinInfo heading={basicData.name} desc={basicData.desc} />
