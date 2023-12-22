@@ -40,7 +40,7 @@ const Home = () => {
         <div className='home'>
             <div className='home-container'>
                 <div className='left-home'>
-                    <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className='heading1'>Track Crypto 🪙</motion.h1>
+                    <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className='heading1'>Track Crypto <span>🪙</span></motion.h1>
                     <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className='heading2 text-color-gridient'> Real Time.</motion.h1>
                     <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }}>Track crypto through a public api in real time. Visit the dashboard to do so!</motion.p>
 

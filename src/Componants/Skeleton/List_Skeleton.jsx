@@ -17,8 +17,6 @@ const ListSkeleton = () => {
                             width={'90vw'}
                             height={80}
                         />
-
-
                     </li>);
                 }
                 return items;

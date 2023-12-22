@@ -3,11 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2.5rem;
+    /* padding: 2rem 2.5rem; */
 }
 
-.css-13xfq8m-MuiTabPanel-root  {
-    padding: 2rem 0  !important;
+.css-13xfq8m-MuiTabPanel-root {
+    padding: 2rem 0 !important;
 }
 
 .list-grid-btn>button {
@@ -71,6 +71,11 @@
     box-sizing: border-box;
     border: 2px solid transparent;
     cursor: pointer;
+    /* From https://css.glass */
+    background: rgba(216, 25, 226, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(216, 25, 226, 0.512);
 
     &:hover {
         scale: 1.03;
@@ -106,40 +111,6 @@
     font-size: 0.9rem;
 }
 
-.price {
-    background: transparent;
-    padding: 0.5rem;
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.red {
-    border: 2px solid var(--red);
-    border-radius: 40px;
-    color: var(--red);
-
-    &:hover {
-        background: var(--red);
-        color: var(--white);
-    }
-}
-
-.green {
-    border: 2px solid var(--green);
-    border-radius: 40px;
-    color: var(--green);
-
-    &:hover {
-        background: var(--green);
-        color: white;
-    }
-}
-
-.price-cur {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
 
 
 /* List Container */
@@ -149,18 +120,19 @@
 }
 
 .list-box {
-    /* border: 1px solid red; */
     padding: 1rem 3rem;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     border-radius: 1rem;
     transition: 0.3s;
+    font-size: 1.05rem;
 
     &:hover {
         background: var(--darkgray);
     }
 }
+
+
 
 table {
     border-collapse: collapse;
@@ -200,16 +172,7 @@ td {
 
 
 
-@media(max-width:1000px) {
-    .list-container {
-        padding: 1rem;
-        font-size: 0.85rem;
-    }
 
-    .price {
-        padding: 0.4rem;
-    }
-}
 
 @media(max-width:600px) {
     .grid-container {
@@ -217,15 +180,14 @@ td {
     }
 }
 
-@media(max-width:800px) {
-    .list-box {
-        padding: 0.5rem;
-    }
-}
+
 
 @media(max-width:800px) {
     .total-val {
         display: none;
+    }
+    .list-box{
+        font-size: 0.8rem;
     }
 }
 
@@ -238,3 +200,4 @@ td {
         display: none;
     }
 }
+

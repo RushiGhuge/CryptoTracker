@@ -1,3 +1,11 @@
 .coin-page-container{
-    padding: 2.5rem;
+    /* padding: 2.5rem; */  
 }
+
+.btns-container-coin-page{
+    display: flex ;
+    align-items: center;
+    padding-top: 0.5rem;
+    flex-wrap: wrap;
+}
+

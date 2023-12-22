@@ -5,6 +5,8 @@ import axios from 'axios';
 import LabTabs from '../../Componants/Dashboard/Tabs';
 import PaginationComponant from '../../Componants/Dashboard/Pagination';
 import GetToTopButton from '../../Componants/Compo/GetToTopButton';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Dashbord = () => {
@@ -14,13 +16,16 @@ const Dashbord = () => {
     const [pageInitioatedData, setPageInitioatedData] = useState([])
     const [page, setPage] = useState(1);
 
+
     const changePage = (e, value) => {
         setPage(value);
         let previousIndex = (value - 1) * 10;
         setPageInitioatedData(data.slice(previousIndex, previousIndex + 10))
-        document.body.scrollTop = 0;    
+        document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    const notify = (noty) => toast(noty);
 
     useEffect(() => {
         async function getData() {
@@ -28,9 +33,11 @@ const Dashbord = () => {
                 const res = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
                 setData(res.data);
                 setPageInitioatedData(res.data.slice(0, 10))
+
             }
             catch (err) {
-                alert(err.message);
+                notify(
+                    "Too many requests. Try again later!😄")
             }
         }
         getData();
@@ -42,11 +49,11 @@ const Dashbord = () => {
 
 
     let filterData = data.filter((item) => item.name.toLowerCase().includes(input.toLowerCase()))
-  
+
+
 
     return (
         <div>
-
             <div className="input-container">
                 <SearchIcon />
                 <input type="text" placeholder='Search' value={input} onChange={handelInput} />
@@ -64,6 +71,7 @@ const Dashbord = () => {
             </div>
 
             <GetToTopButton />
+            <ToastContainer theme='dark' />
         </div>
     );
 }

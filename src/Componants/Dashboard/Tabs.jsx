@@ -18,8 +18,10 @@ export default function LabTabs({ data }) {
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example" variant="fullWidth">
-            <Tab label="Grid" value="gird" sx={{ color: "var(--white)", fontSize: '0.9rem', fontWeight: '600' }} />
+          <TabList disableUnderline onChange={handleChange} aria-label="lab API tabs example" variant="fullWidth">
+            <Tab variant="solid"
+              color="neutral"
+              indicatorInset label="Grid" value="gird" sx={{ color: "var(--white)", fontSize: '0.9rem', fontWeight: '600' }} />
             <Tab label="List" value="list" sx={{ color: "var(--white)", fontSize: '0.9rem', fontWeight: '600' }} />
           </TabList>
         </Box>

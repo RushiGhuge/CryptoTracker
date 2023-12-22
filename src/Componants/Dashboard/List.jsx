@@ -13,19 +13,17 @@ const List = ({ data }) => {
 
     return (
         <table className='list-container'>
+            <tbody>
 
-            {data.map((ele, idx) => {
-                let color = 'green';
-                delay += 0.1;
-                if (ele.price_change_24h < 0) {
-                    color = 'red'
-                }
+                {data.map((ele, idx) => {
+                    delay += 0.1;
 
-                return (
-                    <ListBox
-                        ele={ele} color={color} delay={delay}/>
-                )
-            })}
+                    return (
+                        <ListBox
+                            ele={ele} delay={delay} />
+                    )
+                })}
+            </tbody>
         </table>
     );
 }

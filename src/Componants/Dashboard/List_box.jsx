@@ -5,10 +5,14 @@ import Tooltip from '@mui/material/Tooltip';
 import ConvertNumber from '../../Functions/convertNumber';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import './List_box.css' 
 
+const ListBox = ({ ele, delay=0 }) => {
 
-const ListBox = ({ ele, color, delay }) => {
-
+    let color = 'green';
+    if (ele.price_change_24h < 0) {
+        color = 'red'
+    }
 
     return (
         <Link to={`/coin/${ele.id}`}>
@@ -35,7 +39,7 @@ const ListBox = ({ ele, color, delay }) => {
                     </Tooltip>
 
                     <Tooltip title="Current Status" arrow>
-                        <button className={`price ${color} circle`}>
+                        <button className={`price ${color} circle circle-list`}>
                             {color == 'green' ? <TrendingUpIcon /> : <TrendingDownIcon />}
                         </button>
                     </Tooltip>

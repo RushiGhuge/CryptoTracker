@@ -13,22 +13,26 @@ export default function SelectDays({ days, setDays }) {
     };
 
     return (
-        <Box sx={{m:1, minWidth: 120 }} >
-            <FormControl sx={{ m: 1, minWidth: 120 , color:'var(--white)', background:'var(--darkgray)'}} size="small" >
-                <InputLabel id="demo-simple-select-label">Days</InputLabel>
+        <Box sx={{ m: 1, minWidth: 120, }} >
+            <FormControl sx={{ m: 0, minWidth: 120, outline: 'none', color: 'var(--white)', background: '#9c27b0', borderRadius: '5px' }} size="small" >
+
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={days}
                     label="Days"
-                    InputProps={{
-                        style: {
-                          borderColor: '',
-                        },
-                      }}
+                    sx={{
+                        color: 'white',
+                        borderRadius: '10px',
+                        outline: 'none',
+                        fontWeight:'600',
+                        height:'37px'
+                    }}
+
                     onChange={handleChange}
                 >
                     <MenuItem value={1}>1 Days</MenuItem>
+                    <MenuItem value={2}>2 Days</MenuItem>
                     <MenuItem value={7}>7 Days</MenuItem>
                     <MenuItem value={15}>15 Days</MenuItem>
                     <MenuItem value={30}>30 Days</MenuItem>
