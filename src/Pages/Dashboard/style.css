@@ -10,6 +10,9 @@
     padding: 2rem 0 !important;
 }
 
+.MuiTabPanel-root{
+    padding: 1.5rem 0 !important;
+}
 .list-grid-btn>button {
     width: 100%;
     padding: 10px;
@@ -176,13 +179,6 @@ td {
 
 
 
-
-
-@media(max-width:600px) {
-    .grid-container {
-        padding: 1rem;
-    }
-}
 
 
 
