@@ -6,12 +6,12 @@
 
 .css-1gws2xf-MuiButtonBase-root-MuiIconButton-root {
     background: rgb(252, 252, 252) !important;
-    opacity: 0.5;
-    transition: 0.3s;
+    opacity: 0.5 !important;
+    transition: 0.3s !important;
 
     &:hover {
-        opacity: 0.9;
-        transition: 0.3s;
+        opacity: 0.9 !important;
+        transition: 0.3s !important;
 
     }
 }

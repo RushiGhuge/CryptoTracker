@@ -33,7 +33,7 @@ body {
 }
 
 /* set theme */
-body[data-theme='light'] {
+body[data-theme='light'] {  
     --white: #0f051d;
     --black: #fafafa;
     --blue: #3a80e9;
