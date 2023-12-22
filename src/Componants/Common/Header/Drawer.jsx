@@ -20,6 +20,7 @@ export default function SwipeableTemporaryDrawer() {
         <div className='side-nav'>
           <ThemeSwitchBtn />
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/watchlist">Watchlist</NavLink>
           <NavLink to="/compare">Compare</NavLink>
           <NavLink to="/dashbord">
             <button className="dashbord-btn">Dashboard</button>

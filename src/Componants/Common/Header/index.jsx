@@ -20,6 +20,8 @@ const Header = () => {
 
         <NavLink to="/">Home</NavLink>
 
+        <NavLink to="/watchlist">Watchlist</NavLink>
+
         <NavLink to="/compare">Compare</NavLink>
 
         <NavLink to="/dashbord">
