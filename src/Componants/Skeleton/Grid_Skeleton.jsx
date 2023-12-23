@@ -19,8 +19,8 @@ const DashbordSkeleton = () => {
                                 bgcolor: 'var(--skeleton-color)'
                             }}
                             variant="rounded"
-                            width={300}
-                            height={300}
+                            width={350}
+                            height={330}
                         />
 
                     </li>);

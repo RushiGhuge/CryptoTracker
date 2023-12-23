@@ -1,0 +1,23 @@
+.footer-container{
+    display: flex;
+    padding: 2rem 0;
+    padding-top: 7rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+}
+
+.right-footer{
+    display: flex;
+    gap: 1rem;
+}
+
+@media(max-width:600px){
+    .footer-container{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+}

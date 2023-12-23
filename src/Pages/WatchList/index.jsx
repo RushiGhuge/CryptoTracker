@@ -54,7 +54,7 @@ const WatchList = () => {
 
     return (
         <div>
-            <h1>Watch List</h1>
+            <h2>Watch List 🔔</h2>
             {/* <Loder /> */}
             {fevShowData.length > 0 ?
                 <LabTabs data={fevShowData} setFavIds={setFavIds} />

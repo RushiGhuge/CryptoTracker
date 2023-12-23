@@ -4,4 +4,5 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+    height: 80vh;
 }

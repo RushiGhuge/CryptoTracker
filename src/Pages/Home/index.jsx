@@ -12,6 +12,7 @@ import insta from '../../assets/5296765_camera_instagram_instagram logo_icon.svg
 import linkedin from '../../assets/5296501_linkedin_network_linkedin logo_icon.svg'
 import pin from '../../assets/5296503_inspiration_pin_pinned_pinterest_social network_icon.svg'
 import { NavLink } from 'react-router-dom';
+import SignIn from '../../SignIn';
 
 
 
@@ -48,6 +49,7 @@ const Home = () => {
                         <NavLink to='/dashbord'>
                             <button className='dashbord-btn'>Dashboard</button>
                         </NavLink>
+                    
                         <button onClick={handleOpen} className='share-btn'>Share</button>
                     </motion.div>
                 </div>
