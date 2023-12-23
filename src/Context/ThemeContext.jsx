@@ -5,10 +5,11 @@ const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
 
-    const [themeMode, setThemeMode] = useState('dark');
+    const [themeMode, setThemeMode] = useState(localStorage.getItem('theme') || 'dark');
 
     useEffect(() => {
         document.body.setAttribute('data-theme', themeMode)
+        localStorage.setItem('theme', themeMode)
     }, [themeMode])
 
     const toggleThemeMode = () => {

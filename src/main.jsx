@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import ThemeProvider from './Context/ThemeContext.jsx'
+import AllCoinsContextProvider from './Context/AllCoinsContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <AllCoinsContextProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </AllCoinsContextProvider>
 )

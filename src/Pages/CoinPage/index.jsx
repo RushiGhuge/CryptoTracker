@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import coimobject from '../../Functions/MakeBasicObj'; // function that make basic obj
 import ListBox from '../../Componants/Dashboard/List_box';
@@ -13,7 +13,10 @@ import setChartDataFunction from '../../Functions/dataShowToChart';
 import CoinPageSkeleton from '../../Componants/Skeleton/Coin_page_Skeleton';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import GetToTopButton from '../../Componants/Compo/GetToTopButton';
+import Loder from '../../Componants/Loder/Loder';
+
+const GetToTopButton = lazy(() => import('../../Componants/Compo/GetToTopButton'))
+
 const CoinPage = () => {
 
     // get the coin id from the URL
@@ -107,31 +110,34 @@ const CoinPage = () => {
 
 
     return (
-        <div className='coin-page-container'>
-            {basicData
-                &&
-                <div>
-                    <ListBox ele={basicData} color={'green'} delay={0} />
+        <Suspense fallback={<Loder />}>
 
-                    {
-                        chartData &&
-                        <div>
-                            <div className='btns-container-coin-page'>
-                                <SelectDays days={days} setDays={setDays} />
-                                <ChartBtnsGroup setChartShow={setChartShow} />
-                            </div>
+            <div className='coin-page-container'>
+                {basicData
+                    &&
+                    <div>
+                        <ListBox ele={basicData} color={'green'} delay={0} />
+
+                        {
+                            chartData &&
                             <div>
-                                <CoinChart data={chartData} />
+                                <div className='btns-container-coin-page'>
+                                    <SelectDays days={days} setDays={setDays} />
+                                    <ChartBtnsGroup setChartShow={setChartShow} />
+                                </div>
+                                <div>
+                                    <CoinChart data={chartData} />
+                                </div>
                             </div>
-                        </div>
-                    }
+                        }
 
-                    <CoinInfo heading={basicData.name} desc={basicData.desc} />
-                </div>
-            }
-            <GetToTopButton />
-            <ToastContainer theme='dark' />
-        </div>
+                        <CoinInfo heading={basicData.name} desc={basicData.desc} />
+                    </div>
+                }
+                <GetToTopButton />
+                <ToastContainer theme='dark' />
+            </div>
+        </Suspense>
     );
 }
 

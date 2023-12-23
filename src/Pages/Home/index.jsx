@@ -61,7 +61,7 @@ const Home = () => {
                             repeatType: "mirror",
                             duration: 2,
                             repeat: Infinity
-                        }} className='iphone' src={iPhone} alt="" />
+                        }} className='iphone' src={iPhone} alt="ipoone img" />
                 </div>
             </div>
 

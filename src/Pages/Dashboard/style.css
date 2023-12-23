@@ -99,7 +99,9 @@
 
 .row {
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
+    align-items: center;
 }
 
 .logo>img {
@@ -110,6 +112,12 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.first-row{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .last-row>div {
