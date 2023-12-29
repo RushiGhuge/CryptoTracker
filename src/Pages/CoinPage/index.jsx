@@ -78,7 +78,6 @@ const CoinPage = () => {
     // this useEffect run when the chart showing data is change without any api call...
     useEffect(() => {
         if (allChartData) {
-            console.log('done');
             if (chartShow == 'prices') {
                 setChartDataFunction(allChartData.prices, setChartData, [id])
             }

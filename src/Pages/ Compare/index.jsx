@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ChartBtnsGroup from '../../Componants/Charts/ChartButtonsChangeData';
 import GetToTopButton from '../../Componants/Compo/GetToTopButton';
 
+
 const Compare = () => {
 
     const [coin_1, setCoin_1] = useState('bitcoin');

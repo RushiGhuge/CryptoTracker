@@ -15,7 +15,7 @@ const ListBox = ({ ele, delay=0 }) => {
     }
 
     return (
-        <Link to={`/coin/${ele.id}`}>
+        <Link to={`/coin/${ele.id}`} style={{width:'100%'}}>
             <motion.tr
                 initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0, delay: delay }}
                 className={`list-box`}>
@@ -73,7 +73,7 @@ const ListBox = ({ ele, delay=0 }) => {
                     </div>
                 </td>
             </motion.tr>
-        </Link>
+         </Link>
     )
 }
 

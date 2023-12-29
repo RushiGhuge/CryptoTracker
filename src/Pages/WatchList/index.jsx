@@ -59,7 +59,7 @@ const WatchList = () => {
             {fevShowData.length > 0 ?
                 <LabTabs data={fevShowData} setFavIds={setFavIds} />
                 : <div className='empty-watchList'>
-                    <h2>Watch Your Fevorite Coins 🪙</h2>
+                    <h2>Add Your Fevorite Coins 🪙</h2>
 
                     <NavLink to="/dashbord">
                         <button className="dashbord-btn">Dashboard</button>

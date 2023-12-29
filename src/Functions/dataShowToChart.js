@@ -9,7 +9,6 @@ const setChartDataFunction = (
 
   if (dataShowToChart.length > 2) {
     if (dataShowToChart2) {
-
       const chartData = {
 
         labels: dataShowToChart.map((ele) => formatDate(new Date(ele[0]))),
@@ -48,7 +47,7 @@ const setChartDataFunction = (
             fill: true,
             borderColor: "white",
             tension: 0.5,
-            yAxisId:'y'
+            yAxisId:'y',
           },
         ],
       };

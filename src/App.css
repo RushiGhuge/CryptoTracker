@@ -1,7 +1,9 @@
 .getToTopBtn {
-    position: fixed;
+    display: flex;
+    justify-content: end;
+    position: sticky;
     bottom: 10px;
-    right: 10px;
+    left: 100px;
 }
 
 .css-1gws2xf-MuiButtonBase-root-MuiIconButton-root {

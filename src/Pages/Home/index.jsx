@@ -78,11 +78,11 @@ const Home = () => {
                     aria-describedby="modal-modal-description"
                 >
                     <Box className='share-container' sx={style}>
-                        <img src={whatsapp} alt="" />
-                        <img src={fecebook} alt="" />
-                        <img src={insta} alt="" />
-                        <img src={linkedin} alt="" />
-                        <img src={pin} alt="" />
+                        <img src={whatsapp} alt="img" />
+                        <img src={fecebook} alt="img" />
+                        <img src={insta} alt="img" />
+                        <img src={linkedin} alt="img" />
+                        <img src={pin} alt="img" />
                     </Box>
                 </Modal>
             </div>

@@ -5,7 +5,7 @@ import './chart.css'
 
 
 const CoinChart = ({ data, multiAxis = false }) => {
-  console.log(data);
+
   const options = {
     responsive: true,
 
