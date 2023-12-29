@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 import './List_box.css'
 import '../../Pages/Dashboard/style.css'
 
-s
-const ListBox = ({ ele, delay=0 }) => {
+
+const ListBox = ({ ele, delay = 0 }) => {
 
     let color = 'green';
     if (ele.price_change_24h < 0) {
@@ -17,8 +17,8 @@ const ListBox = ({ ele, delay=0 }) => {
     }
 
     return (
-        
-        <Link to={`/coin/${ele.id}`} style={{width:'100%'}}>
+
+        <Link to={`/coin/${ele.id}`} style={{ width: '100%' }}>
             <motion.tr
                 initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0, delay: delay }}
                 className='list-box b'>
@@ -76,7 +76,7 @@ const ListBox = ({ ele, delay=0 }) => {
                     </div>
                 </td>
             </motion.tr>
-         </Link>
+        </Link>
     )
 }
 
