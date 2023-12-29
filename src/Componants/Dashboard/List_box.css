@@ -6,11 +6,12 @@
 
 /* List Container */
 .list-container {
-    padding: 3rem;
+    padding: 3rem;  
     width: 100%;
 }
 
 .list-box {
+    width: 100%;
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -22,6 +23,10 @@
     }
 }
 
+td {
+
+    width: fit-content;
+}
 
 .price {
     background: transparent;

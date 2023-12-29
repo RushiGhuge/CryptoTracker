@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 2rem 2.5rem; */
 }
 
 .css-13xfq8m-MuiTabPanel-root {
@@ -141,7 +140,6 @@
     border-radius: 1rem;
     transition: 0.3s;
     font-size: 1.05rem;
-
     &:hover {
         background: rgba(151, 20, 221, 0.178);
     }

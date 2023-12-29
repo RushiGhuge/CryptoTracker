@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import ListSkeleton from '../Skeleton/List_Skeleton';
 import ListBox from './List_box';
 
