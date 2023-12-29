@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import { useContext } from 'react';
 import AddFavLocalStorage from '../../Functions/addFavLocalStorage';
 import RemoveFavLocalStorage from '../../Functions/removeFavLocalStorage';
-
+import './List_box.css'
 
 const GridBox = ({ ele, delay, setFavIds }) => {
 
